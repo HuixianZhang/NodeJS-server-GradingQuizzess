@@ -2,11 +2,12 @@
 const express = require('express')
 const app = express()
 
+const uri = process.env.MONGODB_URI;
 
 const mongoose = require('mongoose');
 // mongoose.connect('mongodb://localhost:27017/whiteboard',
 //     {useNewUrlParser: true, useUnifiedTopology: true});
-mongoose.connect('mongodb+srv://GradingQuiz:O7FmSoskBr7JNSZs@cluster0.kvuf3.mongodb.net/whiteboard?retryWrites=true&w=majority',
+mongoose.connect(uri,
     {useNewUrlParser: true, useUnifiedTopology: true});
 
 // const session = require('express-session')
