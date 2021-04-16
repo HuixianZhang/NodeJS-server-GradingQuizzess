@@ -2,14 +2,24 @@
 const express = require('express')
 const app = express()
 
-const uri = process.env.MONGODB_URI;
-
+// const uri = process.env.MONGODB_URI;
+// const mongoAtlasUri = 'mongodb+srv://GradingQuiz:O7FmSoskBr7JNSZs@cluster0.kvuf3.mongodb.net/whiteboard?retryWrites=true&w=majority'
 const mongoose = require('mongoose');
 // mongoose.connect('mongodb://localhost:27017/whiteboard',
 //     {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.connect('mongodb+srv://GradingQuiz:O7FmSoskBr7JNSZs@cluster0.kvuf3.mongodb.net/whiteboard?retryWrites=true&w=majority',
     {useNewUrlParser: true, useUnifiedTopology: true});
-
+// try {
+//     // Connect to the MongoDB cluster
+//     mongoose.connect(
+//         mongoAtlasUri,
+//         { useNewUrlParser: true, useUnifiedTopology: true },
+//         () => console.log(" Mongoose is connected")
+//     );
+//
+// } catch (e) {
+//     console.log("could not connect");
+// }
 // const session = require('express-session')
 // app.use(session({
 //     secret: 'keyboard cat',
