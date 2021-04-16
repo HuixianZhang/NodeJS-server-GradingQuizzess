@@ -53,4 +53,10 @@ require('./controllers/quizzes-controller')(app)
 require('./controllers/questions-controller')(app)
 require('./controllers/quiz-attempts-controller')(app)
 
-app.listen(4000)
+const port = process.env.PORT;
+// ...
+app.listen(port, () => {
+    console.log(`Listening on http://localhost:${port}/`);
+});
+
+// app.listen(4000)
